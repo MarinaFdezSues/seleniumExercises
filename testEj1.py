@@ -4,7 +4,7 @@ from time import sleep
 
 from selenium import webdriver
 
-
+# Ejercicio de Navegación
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
@@ -57,21 +57,16 @@ class PythonOrgSearch(unittest.TestCase):
         noticias.click()
         # Buscamos  los resultados y accedemos al 2º
         rnoticias = driver.find_elements_by_class_name('dbsr')
-        i = 1
-        for noticia in rnoticias:
-            if i == 2:
-                click = noticia.find_element_by_partial_link_text('')
-                click.click()
-                break
-            i += 1
+
+        click = rnoticias[2].find_element_by_partial_link_text('')
+        click.click()
+
         sleep(1)
 
         cookies = driver.get_cookies()
         for c in cookies:
             # domain, name, value
             print(f'Dominio: {c["domain"]} - Nombre: {c["name"]} - Valor: {c["value"]}')
-
-        assert "No results found." not in driver.page_source
 
     def tearDown(self):
         print('fin')
