@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
 
+
 # Ejercicio de Localización de Elementos:
 class PythonOrgSearch(unittest.TestCase):
 
@@ -31,7 +32,7 @@ class PythonOrgSearch(unittest.TestCase):
         # Recargamos con las cookies
         driver.refresh()
 
-        # Le decimos que busque e campo llamado 'q' -> El campo de Buscar
+        # Le decimos que busque el campo llamado 'q' -> El campo de Buscar
         element = driver.find_element_by_name('q')
 
         # Por si tuvieramos que guardar las cookies, se incluye esta instrucción y se comenta la carga de cookies
@@ -53,9 +54,6 @@ class PythonOrgSearch(unittest.TestCase):
 
         # Almacenamos na lista de los resultados de la página 1
         results = driver.find_elements_by_class_name('g')
-        '''results = []
-        for r in resultados:
-            results.append(r)'''
         sleep(1)
 
         # Pulsar en la Página 2 localizando el elemento mediante el nombre de la clase

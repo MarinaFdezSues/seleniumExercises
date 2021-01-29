@@ -4,6 +4,7 @@ from time import sleep
 
 from selenium import webdriver
 
+
 # Ejercicio de Navegación
 class PythonOrgSearch(unittest.TestCase):
 
@@ -29,7 +30,7 @@ class PythonOrgSearch(unittest.TestCase):
         # Recargamos con las cookies
         driver.refresh()
 
-        # Le decimos que busque e campo llamado 'q' -> El campo de Buscar
+        # Le decimos que busque el campo llamado 'q' -> El campo de Buscar
         element = driver.find_element_by_name('q')
 
         # Por si tuvieramos que guardar las cookies, se incluye esta instrucción y se comenta la carga de cookies
