@@ -8,7 +8,7 @@ from selenium.webdriver.support.select import Select
 
 
 # Ejercicio de Localización de Elementos:
-class PythonOrgSearch(unittest.TestCase):
+class Test2(unittest.TestCase):
 
     def setUp(self):
         navegador = '2'  # input('Elija navegador: 1-Firefox 2-Chrome: ')
